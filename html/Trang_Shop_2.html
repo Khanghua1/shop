@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shop</title>
+	<link rel="stylesheet" href="../bootstrap4-5/bootstrap.min.css">
+	<script src="../bootstrap4-5/jquery.min.js"></script>
+	<script src="../bootstrap4-5/popper.min.js"></script>
+	<script src="../bootstrap4-5/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../css/Trang_Shop.css">
+	<link rel="stylesheet" href="../Awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="../css/Trang_Shop-2.css">
+
+</head>
+<body>
+	<div class="app">
+		<header class="header">
+			<div class="container-fluid bg-dark header_top-bar">
+				<div class="container bg-dark">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="text-white col-md-12 header_top-list">
+								<li class="float-left p-2 header_top-list-item">
+									<i class="fa icon-envelope"></i>
+								</li>
+								<a href="Cart_Product.html" style="font-weight: 700;color: white" class="float-right pt-2 pb-2 pl-5 pr-5 header_top-list-item header_top-list-item-cart justify-content-center d-flex align-items-center">
+									<i class="fa icon-shopping-cart mr-1"></i>
+									<span>My Cart - $ 0</span>
+								</a>
+								<li class="float-right p-2  header_top-list-item header_top-list-item-acc d-flex align-items-center">
+									<i class="fa icon-user pr-1"></i>
+									<a class="text-decoration-none " style="color: white" href="Trang_Form.html">Account</a>
+								</li>
+								<li class="float-right p-2 header_top-list-item header_top-list-item-search ">
+									<input class="header_top-list-item-input" class="form-control" type="text" placeholder="Search.." >
+									<i class="fa icon-search"></i>
+									<ul class="list-group header_top-list-item-search-list" id="myList">
+										<li class="list-group-item">Javascript</li>
+										<li class="list-group-item">JQuery</li>
+										<li class="list-group-item">PHP MySQL</li>
+										<li class="list-group-item">NodeJs</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid " style="background-color: black">
+				<div class="container pt-2 pb-2 d-flex align-items-center "  style="background-color: black">
+					<style>
+						.rotate {
+							width: 60px;
+							animation: rotation 5s infinite linear;
+						}
+
+						@keyframes rotation {
+							from {
+								transform: rotate(0deg);
+							}
+
+							to {
+								transform: rotate(359deg);
+							}
+						}
+					</style>
+					<div class="rotate">
+						<svg width="60" id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3618.6 3618.6"><style>.st0{fill:transparent;}.st1{fill:#00d8ff}.st2{fill:none;stroke:#00d8ff;stroke-width:144.7456;stroke-miterlimit:10}</style><path class="st0" d="M0 0h3618.6v3618.6H0z"/><circle class="st1" cx="1806.5" cy="1807.1" r="302.6"/><path class="st2" d="M1806.5 1191.9c406.2 0 783.6 58.3 1068.1 156.2 342.8 118 553.6 296.9 553.6 458.9 0 168.8-223.4 358.9-591.5 480.8-278.3 92.2-644.6 140.4-1030.2 140.4-395.4 0-769.7-45.2-1051.2-141.4-356.1-121.7-570.6-314.2-570.6-479.8 0-160.7 201.3-338.2 539.3-456 285.6-99.5 672.3-159.1 1082.5-159.1z"/><path class="st2" d="M1271 1501.3c202.9-351.9 442-649.7 669-847.2 273.5-238 533.8-331.2 674.1-250.3 146.2 84.3 199.3 372.8 121 752.7-59.2 287.2-200.4 628.5-393.1 962.6-197.5 342.5-423.7 644.2-647.6 840-283.3 247.7-557.3 337.3-700.7 254.6-139.2-80.3-192.4-343.3-125.7-695 56.4-297.4 198-662.1 403-1017.4z"/><path class="st2" d="M1271.5 2119.8c-203.5-351.6-342.1-707.4-399.9-1002.7-69.6-355.8-20.4-627.9 119.8-709 146.1-84.6 422.5 13.5 712.5 271 219.3 194.7 444.4 487.5 637.6 821.3 198.1 342.2 346.6 688.8 404.3 980.5 73.1 369.2 13.9 651.3-129.4 734.2-139.1 80.5-393.5-4.7-664.9-238.2-229.2-197.3-474.5-502.1-680-857.1z"/></svg>
+					</div>
+					<svg style="width: 110px; margin-left:.7rem; color: white;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="angrycreative" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M640 238.2l-3.2 28.2-34.5 2.3-2 18.1 34.5-2.3-3.2 28.2-34.4 2.2-2.3 20.1 34.4-2.2-3 26.1-64.7 4.1 12.7-113.2L527 365.2l-31.9 2-23.8-117.8 30.3-2 13.6 79.4 31.7-82.4 93.1-6.2zM426.8 371.5l28.3-1.8L468 249.6l-28.4 1.9-12.8 120zM162 388.1l-19.4-36-3.5 37.4-28.2 1.7 2.7-29.1c-11 18-32 34.3-56.9 35.8C23.9 399.9-3 377 .3 339.7c2.6-29.3 26.7-62.8 67.5-65.4 37.7-2.4 47.6 23.2 51.3 28.8l2.8-30.8 38.9-2.5c20.1-1.3 38.7 3.7 42.5 23.7l2.6-26.6 64.8-4.2-2.7 27.9-36.4 2.4-1.7 17.9 36.4-2.3-2.7 27.9-36.4 2.3-1.9 19.9 36.3-2.3-2.1 20.8 55-117.2 23.8-1.6L370.4 369l8.9-85.6-22.3 1.4 2.9-27.9 75-4.9-3 28-24.3 1.6-9.7 91.9-58 3.7-4.3-15.6-39.4 2.5-8 16.3-126.2 7.7zm-44.3-70.2l-26.4 1.7C84.6 307.2 76.9 303 65 303.8c-19 1.2-33.3 17.5-34.6 33.3-1.4 16 7.3 32.5 28.7 31.2 12.8-.8 21.3-8.6 28.9-18.9l27-1.7 2.7-29.8zm56.1-7.7c1.2-12.9-7.6-13.6-26.1-12.4l-2.7 28.5c14.2-.9 27.5-2.1 28.8-16.1zm21.1 70.8l5.8-60c-5 13.5-14.7 21.1-27.9 26.6l22.1 33.4zm135.4-45l-7.9-37.8-15.8 39.3 23.7-1.5zm-170.1-74.6l-4.3-17.5-39.6 2.6-8.1 18.2-31.9 2.1 57-121.9 23.9-1.6 30.7 102 9.9-104.7 27-1.8 37.8 63.6 6.5-66.6 28.5-1.9-4 41.2c7.4-13.5 22.9-44.7 63.6-47.5 40.5-2.8 52.4 29.3 53.4 30.3l3.3-32 39.3-2.7c12.7-.9 27.8.3 36.3 9.7l-4.4-11.9 32.2-2.2 12.9 43.2 23-45.7 31-2.2-43.6 78.4-4.8 44.3-28.4 1.9 4.8-44.3-15.8-43c1 22.3-9.2 40.1-32 49.6l25.2 38.8-36.4 2.4-19.2-36.8-4 38.3-28.4 1.9 3.3-31.5c-6.7 9.3-19.7 35.4-59.6 38-26.2 1.7-45.6-10.3-55.4-39.2l-4 40.3-25 1.6-37.6-63.3-6.3 66.2-56.8 3.7zm276.6-82.1c10.2-.7 17.5-2.1 21.6-4.3 4.5-2.4 7-6.4 7.6-12.1.6-5.3-.6-8.8-3.4-10.4-3.6-2.1-10.6-2.8-22.9-2l-2.9 28.8zM327.7 214c5.6 5.9 12.7 8.5 21.3 7.9 4.7-.3 9.1-1.8 13.3-4.1 5.5-3 10.6-8 15.1-14.3l-34.2 2.3 2.4-23.9 63.1-4.3 1.2-12-31.2 2.1c-4.1-3.7-7.8-6.6-11.1-8.1-4-1.7-8.1-2.8-12.2-2.5-8 .5-15.3 3.6-22 9.2-7.7 6.4-12 14.5-12.9 24.4-1.1 9.6 1.4 17.3 7.2 23.3zm-201.3 8.2l23.8-1.6-8.3-37.6-15.5 39.2z"></path></svg>
+				</div>
+			</div>
+		</header>
+		<div class="body">
+			<!--Navigation-->
+			<section class="container-fluid body_navigation-top" style="background-color: black">
+				<div class="container container-mobile">
+					<nav class="navbar navbar-expand-lg navbar-light navbar-inverse"  style="background-color: black">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">	
+							<svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item nav-item-mobiles">
+									<a class="nav-link body_navigation-link " href="Trang_Chu_1.html">HOME</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link active" href="Trang_Shop_2.html">SHOP</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link" href="Trang_Blog_3.html">BLOG</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link" href="Trang_Contact_4.html">CONTACT</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</section>
+			<section class="container breadcrumb">
+				<div class="breadcrumb-item breadcrumb-item-hover ">Home</div>
+				<div class="breadcrumb-item active">Shop</div>
+			</section>
+			<section class="body_product">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 body-product-4-mobile">
+							<div class="body_sreach-produc">
+								<div class="body_sreach-produc-div" style="width: 100%; border: 1px solid black">
+									<input class="body_sreach-produc-div-input focus-test pl-2 pr-2 pt-1 pb-1" id="myInput" onkeyup="myFunction()" placeholder="Product Search....." type="text" style="width: 100%">
+									<ul id="myUL" class="pl-3 list-unstyled d">
+										<li class="test">Jackets For The Soul. What Color Is Yours?</li>
+									</ul>
+								</div>
+								<button onclick="clickMe()" class="body_sreach-btn btn" style="background: #f66249;width: 100px;color: white">Search</button>
+							</div>
+							<div class="body_range">
+								<h5 class="body_range-span mb-3 d-block">Filter by price</h5>
+								<input type="range" class="form-range" min="10" max="500" style="width: 100%" step="10" id="myRange">
+								<div class="body_range-filter d-flex justify-content-between align-items-center">
+									<button onclick="ClickPrice()" class="body_range-btn btn " style="background: #f66249;width: 80px;color: white">Filter</button>
+									<p class="mt-2">Price: <span id="demo"></span>$</p>
+								</div>
+							</div>
+							<div class="body_product-hot mt-3">
+								<div><span style="font-size: 24px;font-weight: 600">Products</span></div>
+								<ul class="body_product-hot-list list-unstyled p-0">
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+											
+											<span class="body_product-hot-item-span">Marina Style</span>
+											<div style="width: 100px;display: flex;color: #ffab1a;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+											</div>
+											<span>$35.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/woman-1484279_1920-255x320.jpg" alt="">
+									</li>
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+											<span class="body_product-hot-item-span">Amari Shirt</span>
+											<span>$25.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/key-692199_1920-255x320.jpg" alt="">
+									</li>
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+											<span class="body_product-hot-item-span">Marcara Sleeveless Dress</span>
+											<div style="width: 100px;display: flex;color: #ffab1a;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												
+												<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>
+											</div>
+											<span>$35.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/girl-in-white-dress-1333640_1920-255x320.jpg" alt="">
+									</li>
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+											<span class="body_product-hot-item-span">Manago Shirt</span>
+											<span>$35.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/cute-955782_1920-255x320.jpg" alt="">
+									</li>
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+											
+											<span class="body_product-hot-item-span">Blue Sweater</span>
+											<div style="width: 100px;display: flex;color: #ffab1a;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												
+												<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>
+
+												
+												<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>
+											</div>
+											<span>$35.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/fashion-1283863_1920-255x320.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+							<div class="body_product-rated">
+								<div><span style="font-size: 24px;font-weight: 600;margin-top: 2rem;margin-bottom: 2rem;display: block">Top rated products</span></div>
+								<ul class="body_product-hot-list list-unstyled p-0">
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+											
+											<span class="body_product-hot-item-span">Marcara Sleeveless Dress</span>
+											<div style="width: 100px;display: flex;color: #ffab1a;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+											</div>
+											<span>$55.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/girl-in-white-dress-1333640_1920-255x320.jpg" alt="">
+									</li>
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+												
+											<span class="body_product-hot-item-span">Asabi - Jeans</span>
+											<div style="width: 100px;display: flex;color: #ffab1a;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+											</div>
+											<span>$25.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/person-1148941_1920-255x320.jpg" alt="">
+									</li>
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+								
+											<span class="body_product-hot-item-span">Alani T-Shirt</span>
+											<div style="width: 100px;display: flex;color: #ffab1a;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+											</div>
+											<span>$35.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/woman-1211441_1920-255x320.jpg" alt="">
+									</li>
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+											
+											<span class="body_product-hot-item-span">Manago Shirt</span>
+											<div style="width: 100px;display: flex;color: #ffab1a;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												
+												<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>
+											</div>
+											<span>$35.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/cute-955782_1920-255x320.jpg" alt="">
+									</li>
+									<li class="body_product-hot-item">
+										<span class="t"></span>
+										<div class="d-flex flex-column">
+										
+											<span class="body_product-hot-item-span">Blue Sweater</span>
+											<div style="width: 100px;display: flex;color: #ffab1a;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												
+												<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>
+
+												
+												<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>
+											</div>
+											<span>$38.00</span>
+										</div>
+										<img style="width: 50px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/fashion-1283863_1920-255x320.jpg" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-8" style="background: white;z-index: 99"> 
+							<div class="body_product-top-list-content-mobile d-flex justify-content-between align-items-center"> 
+								<h3>SHOP</h3>
+								<div class="body_product-8-content-mobile ">
+									<span style="color: #f66249;">Showing 1–12 of 22 results</span>
+									<select class="form-select p-1 " style="border-radius: 4px" >
+										<option selected>Default sorting</option>
+										<option value="1">Sort by popularity</option>
+										<option value="2">Sort by latest</option>
+										<option value="3">Sort by price: low to high</option>
+										<option value="4">Sort by price: high to low</option>
+									</select>
+								</div>
+							</div>
+							<div class="body_product-top-list-mobile">
+								<ul class="body_product-top-list row">	
+									<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+										<a class="too" style="color:black;text-decoration: none" href="Trang_CTSP.html">
+											<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover"style="width: 100%" 
+												src="https://img.ltwebstatic.com/images3_pi/2021/09/27/16327194481e47db83317403154efc5150ea038444_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Women's Jacket </span>
+													<span class="body_product-top-item-content-span2">$12.5$</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</a>
+										</li> 
+										<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+											<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover" style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2020/07/15/1594785884004f8c988f027d758e6b41a94a16f285_thumbnail_900x.webp"
+												alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Little Black Top</span>
+													<span class="body_product-top-item-content-span2">$20.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img">
+													<img class="body_product-top-item-img-hover" style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/07/15/1626318759c9b3369189f0cf8a885d4a20db448cdf_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Andora Scarf</span>
+													<span class="body_product-top-item-content-span2">$40.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover"style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/08/25/162987415581149f24ddb8dfe0a9ff09c3dbc7b000_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Asabi – Jeans</span>
+													<span class="body_product-top-item-content-span2">$31.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover" style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/06/21/1624252635b9781815ee0751678d03b37efb99a93d_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Beije Magawi Shoes</span>
+													<span class="body_product-top-item-content-span2">$20.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover" style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/07/19/1626676936059f9e26d0b3871f39d3abe822e4c111_thumbnail_900x.webp"alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Belka T-Shirt</span>
+													<span class="body_product-top-item-content-span2">$40.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover"style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/06/28/16248790966e308718d92daf7735499775647655c5_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Black top</span>
+													<span class="body_product-top-item-content-span2">$35.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover" style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/09/15/16316756787a27022f4862e9819fa7f9bfc7205eec_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Blue Magawi Shoes</span>
+													<span class="body_product-top-item-content-span2">$20.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover" style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/09/15/1631671247daf31ce37401253f64a003b0854c5327_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Blue Sweater</span>
+													<span class="body_product-top-item-content-span2">$43.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover"style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/08/19/1629341907472861d571ad4e9225b21b33f332be0d_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">FITT Belts</span>
+													<span class="body_product-top-item-content-span2">$35.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover" style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/09/02/16305531391cad07b35de0260e5da38f2f003c3514_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Istwic Scarf</span>
+													<span class="body_product-top-item-content-span2">$20.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+											<li class="body_product-top-item col-md-4 col-6 mb-5" id="Slide">
+												<div class="body_product-top-item-img"><img class="body_product-top-item-img-hover" style="width: 100%" src="https://img.ltwebstatic.com/images3_pi/2021/08/30/163030682017f0bcb4a39dec8ae8dacd1923bd5b5c_thumbnail_900x.webp" alt=""></div>
+												<div class="body_product-top-item-content">
+													<span class="body_product-top-item-content-span1">Jennifer Scarf</span>
+													<span class="body_product-top-item-content-span2">$33.00</span>
+													<button class="body_product-top-item-content-btn">								
+														<svg class="body_product-top-item-content-btn-svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+														<span>ADD TO CART</span>
+													</button>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<nav aria-label="Page navigation example">
+										<ul class="pagination justify-content-center">
+											<li class="page-item"><a class="page-link" style="color: white;border-radius: 5px;border:none;background: black;" href="#">1</a></li>
+											<li class="page-item"><a class="page-link" style="color: black;border:none" href="#">2</a></li>
+											<li class="page-item"><a class="page-link" style="color: black;border:none" href="#">Next</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="page-footer font-small indigo footer_end" style="background: black; color:white">
+			<!-- Footer Links -->
+			<div class="container">
+
+				<!-- Grid row-->
+				<div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+					<!-- Grid column -->
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">META</a>
+						</h6>
+						<ul class="footer_meta-list">
+							<li class="footer_meta-item">>Log in</li>
+							<li class="footer_meta-item">>Entries feed</li>
+							<li class="footer_meta-item">>Comments feed</li>
+							<li class="footer_meta-item">>WordPress.org</li>
+						</ul>
+					</div>
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">RECENT POSTS</a>
+						</h6>
+						<ul class="footer_post-list">
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/down-jackets-1281699_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >Jackets For The Soul. What Color Is Yours?</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/vibrant-641434_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >Best Fabrics For Your Dream Dress!</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/stockings-428602_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >Long Legs? No Longer A Myth! Check it out!</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/clothing-964878_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >Latest Trends For Autumn Are Here!</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">About</a>
+						</h6>
+						<div class="footer_about-text">
+							<div>Pri quas audiam virtute ut, case utamur fuisset eam ut, iisque accommodare an eam.</div><br>
+							<div>Reque blandit qui eu, cu vix nonumy volumus. Legendos intellegam id usu, vide oporteat vix eu, id illud principes has. Nam tempor utamur gubergren no.</div>
+						</div>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">Tags</a>
+						</h6>
+						<div class="footer_tags ">
+							<button class="footer_tags-btn">Autumn</button>
+							<button class="footer_tags-btn">dress</button>
+							<button class="footer_tags-btn">fashion</button>
+							<button class="footer_tags-btn">jackets</button>
+							<button class="footer_tags-btn">stockings</button>
+							<button class="footer_tags-btn">trends</button>
+						</div>
+					</div>
+				</div>
+				<div class="row pb-3">
+					<div class="col-md-12">
+						<div class="mb-5 flex-center">
+							<!-- Facebook -->
+							<a class="fb-ic">
+								<i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+							</a>
+							<!-- Twitter -->
+							<a class="tw-ic">
+								<i class="fab fa-twitter fa-lg white-text mr-4"> </i>
+							</a>
+							<!-- Google +-->
+							<a class="gplus-ic">
+								<i class="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
+							</a>
+							<!--Linkedin -->
+							<a class="li-ic">
+								<i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+							</a>
+							<!--Instagram-->
+							<a class="ins-ic">
+								<i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+							</a>
+							<!--Pinterest-->
+							<a class="pin-ic">
+								<i class="fab fa-pinterest fa-lg white-text"> </i>
+							</a>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="footer-copyright text-center  bg-dark  py-3" style="color:white">© 2020 Copyright:
+			<a href="https://mdbootstrap.com/"> Sach.com</a>
+		</div>
+		<style>
+			.d{
+				display: none;
+			}
+			.focus-test:focus ~ .d{
+				display: block;
+			}
+			.test2{
+				color: black;
+			}
+			.body_product-top-item-img-hover{
+				transition: linear 0.3s;
+			}
+			.t{
+				position: absolute;
+				background: #eb7434;
+				width:349.99px;
+				height: 81.77px;
+				opacity: .5;
+				transform: translateX(120%);
+				cursor: pointer;
+				transition: all linear .4s;
+			}
+		</style>
+		<!-- Footer -->
+		<script>
+			//body_product-hot-item
+			var hotItem = document.querySelectorAll('.body_product-hot-item');
+			for(let i = 0; i < hotItem.length; i++){
+				var arrHI = hotItem[i];
+				arrHI.onmouseover = function(){
+					this.children[0].style.transform = "translateX(0)";
+				}
+				arrHI.onmouseout = function(){
+					this.children[0].style.transform = "translateX(120%)";
+				}
+			}
+
+
+
+
+
+			//Scale img
+			var img = document.querySelectorAll('.body_product-top-item-img-hover');
+			function mouseOver(){
+				for(let i = 0; i <  img.length ; i++){
+					arr = img[i];
+					arr.addEventListener("mouseover",function(){
+						this.style.transform = "scale(1.2)";
+						console.log(this)
+					});
+				}
+			}
+			function mouseUp(){
+				for(let i = 0; i <  img.length ; i++){
+					arr = img[i];
+					arr.addEventListener("mouseout",function(){
+						this.style.transform = "scale(1)";
+						console.log(this)
+					});
+				}
+			}
+			mouseOver();
+			mouseUp();
+		</script>
+		<script>
+			//Range
+			var slider = document.getElementById("myRange");
+			var output = document.getElementById("demo");
+			output.innerHTML = slider.value;
+
+			slider.oninput = function() {
+				output.innerHTML = this.value;
+			}
+			//click
+			function ClickPrice(){
+				alert("Bạn đã chọn các sản phẩm có giá " + slider.value +"$")
+			}
+			//add list
+			function clickMe(){
+				const list = document.getElementById('myUL');
+				const input = document.getElementById('myInput');
+				const child = document.createElement('li');
+				child.textContent = input.value;
+				input.value = "";
+				input.focus();
+				list.appendChild(child).classList.add("test");
+			}
+
+			//sreach 
+			function myFunction() {
+				var input, filter, ul, li, a, i, txtValue;
+				input = document.getElementById("myInput");
+				filter = input.value.toUpperCase();
+				ul = document.getElementById("myUL");
+				li = ul.querySelectorAll(".test");
+				for (i = 0; i < li.length; i++) {
+					arr = li[i];
+					txtValue = arr.textContent || arr.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						arr.style.display = "";
+					} else {
+						arr.style.display = "none";
+					}
+					console.log(arr.innerText)
+				}
+			}
+			//hover 
+		</script>
+	</div>
+</body>
+</html>

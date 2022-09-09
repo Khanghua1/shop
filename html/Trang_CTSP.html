@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="../bootstrap4-5/bootstrap.min.css">
+	<script src="../bootstrap4-5/jquery.min.js"></script>
+	<script src="../bootstrap4-5/popper.min.js"></script>
+	<script src="../bootstrap4-5/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../css/Trang_Chu_1.css">
+	<link rel="stylesheet" href="../css/Trang_CTSP.css">
+	<script src="../js/Trang_Chu_1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+	<script src = "https://code.jquery.com/jquery-1.10.2.js"> </script>
+	<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"> </script>
+</head>
+<body>
+	<div class="app">
+		<header class="header">
+			<div class="container-fluid bg-dark header_top-bar">
+				<div class="container bg-dark">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="text-white col-md-12 header_top-list">
+								<li class="float-left p-2 header_top-list-item">
+									<i class="fa icon-envelope"></i>
+									
+								</li>
+								<a href="Cart_Product.html" style="font-weight: 700;color: white" class="float-right pt-2 pb-2 pl-5 pr-5 header_top-list-item header_top-list-item-cart justify-content-center d-flex align-items-center">
+									<i class="fa icon-shopping-cart mr-1"></i>
+									<span>My Cart - $ 0</span>
+								</a>
+								<li class="float-right p-2  header_top-list-item header_top-list-item-acc d-flex align-items-center">
+									<i class="fa icon-user pr-1"></i>
+									<a class="text-decoration-none " style="color: white" href="Trang_Form.html">Account</a>
+								</li>
+								<li class="float-right p-2 header_top-list-item header_top-list-item-search ">
+									<input class="header_top-list-item-input" class="form-control" id="myInput" type="text" placeholder="Search.." >
+									<i class="fa icon-search"></i>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid " style="background-color: black">
+				<div class="container pt-2 pb-2 "  style="background-color: black">
+					<img class="header_img-mobile" style="width: 160px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/logo.png" alt="">
+				</div>
+			</div>
+		</header>
+		<div class="body">
+			<!--PC-->
+			<section class="container-fluid body_navigation-top" style="background-color: black">
+				<div class="container container-mobile">
+					<nav class="navbar navbar-expand-lg navbar-light navbar-inverse"  style="background-color: black">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">	
+							<svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item nav-item-mobiles">
+									<a class="nav-link body_navigation-link " href="Trang_Chu_1.html">HOME</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link" href="Trang_Shop_2.html">SHOP</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link" href="Trang_Blog_3.html">BLOG</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link" href="Trang_Contact_4.html">CONTACT</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</section>
+			<section>
+				<div class="container-fluid " style="background-color: #e9ecef">
+					<div class="container">
+						<nav aria-label="breadcrumb">
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">Shop</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Zipper Dress Color</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!--san pham-->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-1 col-12">
+						</div>
+						<div class="col-md-4 col-12 mb-2 p-3">
+							<div>
+								<style>
+									figure.zoom {
+										background-position: 50% 50%;
+										position: relative;
+										width: 100%;
+										overflow: hidden;
+										cursor: zoom-in;
+									}
+
+									figure.zoom img:hover {
+										opacity: 0;
+									}
+
+									figure.zoom img {
+										transition: opacity 0.5s;
+										display: block;
+										width: 100%;
+									}
+								</style>
+							<figure class="zoom" style="background:url(https://img.ltwebstatic.com/images3_pi/2021/09/27/16327194299086de63c71a257a898fbdf82151693e_thumbnail_900x.webp)"
+								onmousemove="zoom(event)">
+								<img id="img" src="https://img.ltwebstatic.com/images3_pi/2021/09/27/16327194299086de63c71a257a898fbdf82151693e_thumbnail_900x.webp" />
+							</figure>
+							<ul class="list-unstyled d-flex justify-content-around anima" style="padding: .4rem 0rem ;">
+								<li class="animation "><img onclick="clickme('one')" id="one" src="https://img.ltwebstatic.com/images3_pi/2021/09/27/1632719433c553b70b1bfe7adf05a1f0df1021b0a7_thumbnail_900x.webp" height="100" style="width: 80px" alt=""></li>
+								<li class="animation"><img onclick="clickme('two')" id="two" src="https://img.ltwebstatic.com/images3_pi/2021/09/27/1632719446323beb1ccbcd3308bd4e8c1b28a83f18_thumbnail_900x.webp" height="100" style="width: 80px" alt=""></li>
+								<li class="animation"><img onclick="clickme('three')" id="three" onclick="click()"src="https://img.ltwebstatic.com/images3_pi/2021/09/27/16327194481e47db83317403154efc5150ea038444_thumbnail_900x.webp" height="100" style="width: 80px" alt=""></li>
+								<li class="animation"><img onclick="clickme('four')" id="four" src="https://img.ltwebstatic.com/images3_pi/2021/09/27/1632719437c82762973e557db4fe9cdb8cd06e58bd_thumbnail_900x.webp" height="100" style="width: 80px" alt=""></li>
+							</ul>
+						</div>
+					</div>
+						<div class="col-md-7 col-12 mobiu">
+							<div class="card">
+								<div class="card-header bg-white ">
+									<P class="s">DAZY Women's Jacket Zipper Ribbon Leisure Letter</P>
+									<div class="row">
+										<div class="col-md-12 start-mobile d-flex">
+											<span>SKU: swdress30210616913 </span>
+											<div style="width: 70px;display: flex;color: #ffab1a;margin-left: 1rem;">
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+
+												<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+											</div>
+											<a href="">(12,543 reviews)</a>
+										</div>
+									</div>
+									<div>
+										<span style="font-size: 30px; font-weight: 500">12.15$</span>
+									</div>
+									<div style="font-size: 13px;">
+										<span class="mr-5">Delivery time</span>
+										<a class=" text-dark" href="">Place of delivery</a> <a href="">Change</a>
+									</div>
+									<div style="font-size: 13px;">
+										<span class="mr-5">Return Policy</span>
+										<a class=" text-dark ml-3" href="">Return products within 30 days</a> <a href="">Leanr more</a>
+									</div>
+									<div class="mt-2" style="font-size: 13px">
+										<span>Quantity:</span>
+										<input style="width: 10%;margin-left: 0.5rem" type="number">
+									</div>
+								</div>
+								<div style="padding: 0 20px">
+									<Span>Size</Span>
+									<div class="mb-4 mt-2">
+										<button id="click-slide" class="body_size active1">S</button>
+										<ul id="slideS" class="body_size-list">
+											<li class="body_size-item">Vai :  <span> 63 cm</span></li>
+											<li class="body_size-item">Ngực : <span>  126 cm</span></li>
+											<li class="body_size-item">Kích thước vòng eo : <span>  53.5cm</span></li>
+											<li class="body_size-item">Chiều dài tay : <span>  53.5 cm</span></li>
+											<li class="body_size-item">Chiều dài :  <span> 65.5 cm</span></li>
+											<li class="body_size-item">Cổ tay áo :  <span> 33-19 cm</span></li>
+										</ul>
+										<button id="click-slide" class="body_size">M</button>
+										<ul id="slideL" class="body_size-list">
+											<li class="body_size-item">Vai :  <span>65 cm</span></li>
+											<li class="body_size-item">Ngực : <span> 130 cm</span></li>
+											<li class="body_size-item">Kích thước vòng eo : <span>  68 cm</span></li>
+											<li class="body_size-item">Chiều dài tay : <span>  54.5 cm </span></li>
+											<li class="body_size-item">Chiều dài :  <span> 130 cm</span></li>
+											<li class="body_size-item">Cổ tay áo :  <span> 34-20 cm</span></li>
+										</ul>
+										<button id="click-slide" class="body_size">L</button>
+										<ul id="slideM" class="body_size-list">
+											<li class="body_size-item">Vai :  <span> 67 cm</span></li>
+											<li class="body_size-item">Ngực : <span> 134 cm</span></li>
+											<li class="body_size-item">Kích thước vòng eo : <span>  68 cm</span></li>
+											<li class="body_size-item">Chiều dài tay : <span>  55.5 cm </span></li>
+											<li class="body_size-item">Chiều dài :  <span>  67.5 cm </span></li>
+											<li class="body_size-item">Cổ tay áo :  <span> 35-21 cm</span></li>
+										</ul>
+										<button id="click-slide" class="body_size">XL</button>
+										<ul id="slideXL" class="body_size-list">
+											<li class="body_size-item">Vai :  <span> 69 cm</span></li>
+											<li class="body_size-item">Ngực : <span>  138 cm</span></li>
+											<li class="body_size-item">Kích thước vòng eo : <span>  68 cm</span></li>
+											<li class="body_size-item">Chiều dài tay : <span> 56.5 cm </span></li>
+											<li class="body_size-item">Chiều dài :  <span> 68.5 cm</span></li>
+											<li class="body_size-item">Cổ tay áo :  <span> 36-22 cm</span></li>
+										</ul>
+										<style>
+											.body_size{
+												border: 1px solid gray;
+												border-radius: 15px;
+												padding: .2rem 1.5rem;
+												background: white;
+												z-index: 100;
+											}
+											.body_size-list{
+												position: absolute;
+												z-index: 100;
+												list-style-type: none;
+												padding: 0;
+												animation: myAnimation ease-in 0.3s;
+												border:1px solid black;
+												box-shadow: 0px 0px 5px 0px black;
+												margin-top: 1rem;
+												width: 250px;
+												padding: .2rem 1rem;
+												background: white;
+												display: none;
+											}
+											@keyframes myAnimation{
+												0%{
+													opacity: 0;
+												}
+												25%{
+													opacity: 0.25;
+												}
+												50%{
+													opacity: 0.5;
+												}
+												75%{
+													opacity: 0.75;
+												}
+												100%
+												{
+													opacity: 1;
+												}
+											}
+											@media(max-width: 767px) {
+												.start-mobile{
+													padding: 0 1rem;
+												}
+											}
+											
+										</style>
+									</div>
+								</div>
+								<div class="ml-4 d-flex">
+									<button id="opener-2" class="btn btn-dark" style="padding: .5rem 2rem"><i class="fas icon-shopping-cart " style="color: #FF9900;"></i>Add to cart</button>
+									<div id = "dialog-2" title="GeeksforGeeks">
+										Thêm thành công
+									</div>	
+									<div style="border: 1px solid #e5e5e5;  border-radius: 50%;padding:.4rem .7rem ;margin-left: 1rem;cursor: pointer;">
+										<svg onclick="clickColor()" id="color-svg" style="width: 35px; color:gray;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+									</div>
+								</div>
+								<div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+								<div class="mt-3" style="padding: 0rem 1.5rem">
+									<h6>Describe</h6>
+									<span>Style: Leisure
+										Color: black
+										Pattern Type: Letter
+										Length: Regular
+										Season: Spring/Autumn
+										Type: Other
+										Details: Pocket, Zipper, Ribbon
+										Fit Type: Too Big
+										Bezel: Necklace
+										Sleeve Length: Long Sleeve
+										Sleeve Type: Raglan Sleeve
+										Thin: No
+										Hand bag: Zipper
+										Material: Polyester
+										Composition: 100% Polyester
+										Fabric: No stretch
+									Care Instructions: Machine wash or professional dry clean </span>
+								</div>
+								<div class="card-body bg-white ">
+									<span style="font-weight: 500;z-index: 1">Related Suggestions</span><br><br>
+									<a href="#">+Enter the code "QRMEGA": 10% off immediately, pay via VNPAY</a><br>
+									<a href="#">+30% refund, up to 100K, payment for Moca wallet</a><br>
+									<a href="#">+Instant discount of 20K, orders from 50K, pay via ZaloPay Wallet</a><br>
+									<a  href="#">+Enter code "AIRPAY024", 10% discount, orders from 0 VND, pay via AirPay wallet</a><br>
+									<div>
+										<a style="color: #FF9900;font-weight: 500" href="#">See more offers<i class="fa icon-arrow-down"></i></a>
+									</div>
+								</div>
+								<div class="card-footer mobilg" style="background: #f66249;color: white">
+									Call to order:<i class=" icon-phone"></i>1800.1060 Free +7:30-22:00
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container mt-4 mb-4">
+				<div class="bg-white" style="background: ">
+					<h4 >Customer Feedback(1)</h4>
+					<br>
+					<div class="row" style="background: #f7f8fa;padding: 1rem 1rem">
+						<div class="col-md-6">
+							<div><span style="font-weight: 700">Average rating</span></div>
+							<div class="d-flex mt-3">
+								<svg style="font-size: 24px;width: 24px;height: 24px; color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+								<svg style="font-size: 24px;width: 24px;height: 24px; color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+								<svg style="font-size: 24px;width: 24px;height: 24px; color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+								<svg style="font-size: 24px;width: 24px;height: 24px; color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+								<svg style="font-size: 24px;width: 24px;height: 24px; color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+								<div style="font-size: 20px; color:#ffc016;font-weight: 600">5.0</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<span style="font-weight: 700">Does the item fit?</span>
+							<ul style="padding: 0;list-style-type: none">
+								<li style="display: flex;align-items: center;" >
+									<span>Small</span>
+									<div class="progress" style="height: 7px;width: 50%;margin-left: 3rem;margin-right: .5rem">
+										<div style="width: 0%" class="progress-bar bg-dark" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="70"></div>
+									</div>
+									<span style="font-size: 13px">0%</span>
+								</li>
+								<li style="display: flex;align-items: center;" >
+									<span>Good</span>
+									<div class="progress" style="height: 7px;width: 50%;margin-left: 3rem;margin-right: .5rem">
+										<div style="width: 100%" class="progress-bar bg-dark" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="70"></div>
+									</div>
+									<span style="font-size: 13px">100%</span>
+								</li>
+								<li style="display: flex;align-items: center;" >
+									<span>Large</span>
+									<div class="progress" style="height: 7px;width: 50%;margin-left: 3rem;margin-right: .5rem">
+										<div style="width: 0%" class="progress-bar bg-dark" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="70"></div>
+									</div>
+									<span style="font-size: 13px">0%</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="mt-3 mb-5" style="border-bottom: 1px solid gray">
+					<div>
+						<span style="border-bottom: 2px solid black;padding: .2rem 0rem 0.4rem">All reviews (1)</span>
+						<ul class="mt-3 p-0 d-flex justify-content-between list-unstyled " >
+							<li>
+								<h6>J****</h6>
+								<div>Height: 173 cm / 68 in</div>
+								<div>Bust: 108 cm / 43 in</div>
+								<div class="d-flex align-items-center"><span>More</span> <svg style="width: 12px;font-size: 12px;margin-left: .2rem;margin-bottom:.2rem" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort-down" class="svg-inline--fa fa-sort-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"></path></svg></div>
+							</li>
+							<li>
+								<div class="d-flex mt-3">
+									<svg style="font-size: 13px;width: 13px;height: 13px; color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+									<svg style="font-size: 13px;width: 13px;height: 13px; color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+									<svg style="font-size: 13px;width: 13px;height: 13px;color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+									<svg style="font-size: 13px;width: 13px;height: 13px;color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+									<svg style="font-size: 13px;width: 13px;height: 13px;color:#ffc016" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+								</div>
+								<span>it’s a little bit long but the material is good and it looks great</span>
+								<div>Overall Fit: True to Size Size: S Color: Multicolor</div>
+							</li>
+							<li>
+								<div>21 Oct,2021</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="container mb-5">
+				<img style="width: 100%" src="https://img.ltwebstatic.com/images3_acp/2021/10/25/16351620559323be03e2546a69dbb0eb74370f4b45.webp" alt="">
+			</section>
+			<section class="container mb-5">
+				<h4>Related search</h4>
+				<button class="hoverr" style="border-radius: 20px; border:1px solid gray;font-size: 12px;padding: 0.3rem 0.7rem;">New Men's Outfits</button>
+			</section>
+		</div>
+		<!-- Footer -->
+		<footer class="page-footer font-small indigo footer_end" style="background: black; color:white">
+			<!-- Footer Links -->
+			<div class="container">
+
+				<!-- Grid row-->
+				<div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+					<!-- Grid column -->
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">META</a>
+						</h6>
+						<ul class="footer_meta-list">
+							<li class="footer_meta-item">>Log in</li>
+							<li class="footer_meta-item">>Entries feed</li>
+							<li class="footer_meta-item">>Comments feed</li>
+							<li class="footer_meta-item">>WordPress.org</li>
+						</ul>
+					</div>
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">RECENT POSTS</a>
+						</h6>
+						<ul class="footer_post-list">
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/down-jackets-1281699_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >Jackets For The Soul. What Color Is Yours?</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/vibrant-641434_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >Best Fabrics For Your Dream Dress!</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/stockings-428602_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >Long Legs? No Longer A Myth! Check it out!</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/clothing-964878_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >Latest Trends For Autumn Are Here!</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">About</a>
+						</h6>
+						<div class="footer_about-text">
+							<div>Pri quas audiam virtute ut, case utamur fuisset eam ut, iisque accommodare an eam.</div><br>
+							<div>Reque blandit qui eu, cu vix nonumy volumus. Legendos intellegam id usu, vide oporteat vix eu, id illud principes has. Nam tempor utamur gubergren no.</div>
+						</div>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">Tags</a>
+						</h6>
+						<div class="footer_tags ">
+							<button class="footer_tags-btn">Autumn</button>
+							<button class="footer_tags-btn">dress</button>
+							<button class="footer_tags-btn">fashion</button>
+							<button class="footer_tags-btn">jackets</button>
+							<button class="footer_tags-btn">stockings</button>
+							<button class="footer_tags-btn">trends</button>
+						</div>
+					</div>
+				</div>
+				<div class="row pb-3">
+					<div class="col-md-12">
+						<div class="mb-5 flex-center">
+							<!-- Facebook -->
+							<a class="fb-ic">
+								<i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+							</a>
+							<!-- Twitter -->
+							<a class="tw-ic">
+								<i class="fab fa-twitter fa-lg white-text mr-4"> </i>
+							</a>
+							<!-- Google +-->
+							<a class="gplus-ic">
+								<i class="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
+							</a>
+							<!--Linkedin -->
+							<a class="li-ic">
+								<i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+							</a>
+							<!--Instagram-->
+							<a class="ins-ic">
+								<i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+							</a>
+							<!--Pinterest-->
+							<a class="pin-ic">
+								<i class="fab fa-pinterest fa-lg white-text"> </i>
+							</a>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="footer-copyright text-center  bg-dark  py-3" style="color:white">© 2020 Copyright:
+			<a href="https://mdbootstrap.com/"> Sach.com</a>
+		</div>
+		<!-- Footer -->
+	</div>
+	<style>
+		.animation{
+			opacity: 0.7;
+		}
+		.animation:hover{
+			transition: all linear 0.2s;
+			transform: scale(1.1);
+			opacity: 1;
+		}
+		.ui-widget-header,.ui-state-default, ui-button {
+			background:Black;
+			border: 1px solid Black;
+			color: #FFFFFF;
+			font-weight: bold;
+			font-family: cursive;
+		}
+		.active1{
+			border: 2px solid black;
+		}
+	</style>
+
+	<script>
+		function zoom(event){
+			var zoomer = event.currentTarget;
+			x = event.offsetX/zoomer.offsetWidth*100;
+			y = event.offsetY/zoomer.offsetHeight*100;
+			zoomer.style.backgroundPosition = x + '% ' + y + '%';
+		}
+		var f = document.querySelector('.zoom')
+		var anima = document.querySelectorAll('.animation')
+		for(let i = 0; i < anima.length ; i++){
+			arr = anima[i]
+			arr.onclick = function(){
+				const att = this.children[0].getAttribute('src');
+				f.setAttribute("style", "background: url(" + att + ")");
+			}
+		}
+	</script>
+	<script>
+		function brActive(){
+			const btn = document.querySelectorAll('#click-slide');
+			for (var i = 0; i < btn.length; i++) {
+				btn[i].addEventListener("click", function() {
+					var current = document.getElementsByClassName("active1");
+					current[0].className = current[0].className.replace("active1", "");
+					this.className += " active1";
+				});
+			}
+		}
+		brActive()
+	</script>
+	<script>
+		function clickme(id){
+			let img = document.getElementById(id).getAttribute('src');
+			document.getElementById('img').setAttribute('src',img)
+		}
+		
+		function clickColor(){
+			var element = document.getElementById("color-svg");
+			if(element.style.color === "gray"){
+				element.style.color = "red";
+			}else{
+				element.style.color = "gray";
+			}
+		}
+
+		//slide
+		function Slide(index){
+			if(index === 0){
+				$("#slideS").slideToggle("slow");
+			}else if(index === 1){
+				$("#slideL").slideToggle("slow");
+			}else if(index === 2){
+				$("#slideM").slideToggle("slow");
+			}else{
+				$("#slideXL").slideToggle("slow");
+			}
+		}
+		var clickSlide = document.querySelectorAll('#click-slide');
+		var slide = document.querySelectorAll('#slide')
+
+		for(let i = 0; i < clickSlide.length; i++){
+			arr = clickSlide[i];
+			arr.onclick = function(){
+				Slide(i);
+			}
+		}
+		//dialog
+		$(function() {
+			$( "#dialog-2" ).dialog({
+				autoOpen: false, 
+				buttons: {
+					"Đồng ý": function() {$(this).dialog("close");}
+				},
+				hide: "puff",
+				show : "slide",
+				title: "Đồng ý thêm vào giỏ hàng",
+			});
+			$( "#opener-2" ).click(function() {
+				$( "#dialog-2" ).dialog( "open" );
+			});
+		});
+	</script>
+</body>
+</html>

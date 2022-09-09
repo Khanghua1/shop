@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Cart</title>
+	<link rel="stylesheet" href="../bootstrap4-5/bootstrap.min.css">
+	<script src="../bootstrap4-5/jquery.min.js"></script>
+	<script src="../bootstrap4-5/popper.min.js"></script>
+	<script src="../bootstrap4-5/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../css/trang_shop.css">
+	<link rel="stylesheet" href="../css/trang_blog_3.css">
+	<link rel="stylesheet" href="../css/trang_contact_4.css">
+	<link rel="stylesheet" href="../css/Cart_Produc.css">
+	<link href ="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"> </script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">></script>
+</head>
+<body>
+	<div class="app">
+		<header class="header">
+			<div class="container-fluid bg-dark header_top-bar">
+				<div class="container bg-dark">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="text-white col-md-12 header_top-list">
+								<li class="float-left p-2 header_top-list-item">
+									<i class="fa icon-envelope"></i>
+									
+								</li>
+								<a href="cart_product.html" style="font-weight: 700;color: white" class="float-right pt-2 pb-2 pl-5 pr-5 header_top-list-item header_top-list-item-cart justify-content-center d-flex align-items-center">
+									<i class="fa icon-shopping-cart mr-1"></i>
+									<span>My Cart - $ 0</span>
+								</a>
+								<li class="float-right p-2  header_top-list-item header_top-list-item-acc d-flex align-items-center">
+									<i class="fa icon-user pr-1"></i>
+									<a class="text-decoration-none " style="color: white" href="Trang_Form.html">Account</a>
+								</li>
+								<li class="float-right p-2 header_top-list-item header_top-list-item-search ">
+									<input class="header_top-list-item-input" class="form-control" id="myinput" type="text" placeholder="Search.." >
+									<i class="fa icon-search"></i>
+									<ul class="list-group header_top-list-item-search-list" id="mylist">
+										<li class="list-group-item">javascript</li>
+										<li class="list-group-item">jquery</li>
+										<li class="list-group-item">php mysql</li>
+										<li class="list-group-item">nodejs</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid " style="background-color: black">
+				<div class="container pt-2 pb-2 "  style="background-color: black">
+					<img class="header_img-mobile" style="width: 160px" src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/logo.png" alt="">
+				</div>
+			</div>
+		</header>
+		<div class="body">
+			<!--navigation-->
+			<section class="container-fluid body_navigation-top" style="background-color: black">
+				<div class="container container-mobile">
+					<nav class="navbar navbar-expand-lg navbar-light navbar-inverse"  style="background-color: black">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsupportedcontent" aria-controls="navbarsupportedcontent" aria-expanded="false" aria-label="toggle navigation">	
+							<svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path fill="currentcolor" d="m16 132h416c8.837 0 16-7.163 16-16v76c0-8.837-7.163-16-16-16h16c7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16h16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16h16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarsupportedcontent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item nav-item-mobiles">
+									<a class="nav-link body_navigation-link " href="trang_chu_1.html">HOME</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link" href="trang_shop_2.html">SHOP</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link" href="trang_blog_3.html">BLOG</a>
+								</li>
+								<li class="nav-item nav-item-mobile">
+									<a class="nav-link body_navigation-link" href="trang_contact_4.html">CONTACT</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</section>
+			<!--breadcrumb-->
+			<section>
+				<div class="container">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="Trang_Chu_1.html">Home</a></li>
+							<li class="breadcrumb-item"><a href="Trang_Shop_2.html">Shop</a></li>
+							<li class="breadcrumb-item active" aria-current="page">My Cart</li>
+						</ol>
+					</nav>
+				</div>
+			</section>
+			<!--Table-->
+			<section class="container table-responsive">
+				<div class="row">
+					<div class="col-md-8">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Product</th>
+									<th scope="col"></th>
+									<th scope="col">Price</th>
+									<th scope="col">Quantity</th>
+									<th scope="col">Delete</th>
+								</tr>
+							</thead>
+							<tbody id="render-html">
+								
+								
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-4 pb-5 mobil" style="width: 100%; display: flex;justify-content: flex-end; flex-wrap: wrap;">
+						<ul class="list-group">
+							<li class="list-group-item d-flex"><a href=""><i class="fa icon-ticket" style="margin-right: 0.5rem; font-size: 20px" aria-hidden="true"></i>ON SALE</a></li>
+							<li class="list-group-item" style="font-weight: 700">
+								<div style="display: flex;">
+									<section style="margin-right: 4rem">FHS2106DD: SALE 30K </section>
+									<a style="text-decoration: underline" href="">Details</a>
+								</div>
+								<section style="color:gray; font-weight: 400">ENTER FHS2106DD - 30$ OFF for orders FROM 199$ CZK</section>
+								<div class="d-flex">
+									<div class="progress"  style="margin-top: 1rem;width: 70%;border-radius: 2rem;">
+										<div class="progress-bar" style="width:80%; border-radius: 2rem;">
+										</div>
+									</div>
+									<button class="btn btn-primary" style="padding:0.2rem;margin-left: 0.5rem; margin-top: 0.5rem">Buy more</button>
+								</div>
+								<div style="font-weight: 400; font-size: 12px">Buy more 1$ to receive code 19,99$</div>
+							</li>
+							<li class="list-group-item">
+								<div style="display: flex;">
+									<section style="margin-right: 3rem">30% Cashback (up to 30$)</section>
+									<a style="text-decoration: underline" href="">Details</a>
+								</div>
+								<section style="color:gray; font-weight: 400">Applicable when paying via Moca Wallet on Grab App</section>
+								<div class="d-flex">
+									<div class="progress"  style="margin-top: 1rem;width: 70%;border-radius: 2rem;">
+										<div class="progress-bar" style="width:90%; border-radius: 2rem;">
+										</div>
+									</div>
+									<button class="btn btn-primary" style="padding:0.2rem;margin-left: 0.5rem; margin-top: 0.5rem">Buy more</button>
+								</div>
+								<div style="font-weight: 400; font-size: 12px">Buy more 1$ to receive code 20$</div>
+							</li>
+							<li class="list-group-item" style="color: gray; font-weight: 400;font-size: 14px">
+								Multiple codes can be applied at the same time<i class="icon-info-sign"></i>
+							</li>
+						</ul>
+						<ul class="list-group mobiwap2" style="width: 100%; margin-top: 1rem;">
+							<li class="list-group-item mobi" style="display: flex;justify-content: space-between;">
+								<section style="font-weight: 400; font-size: 14px">Into money</section>
+								<section id="text-subtotal">87,4$</section>
+							</li>
+							<li class="list-group-item mobi" style="display: flex;justify-content: space-between;">
+								<section style="font-weight: 400; font-size: 14px">VAT</section>
+								<section id="text-shipping">2$</section>
+							</li>
+							<li class="list-group-item fidex" style="display: flex;justify-content: space-between;flex-wrap: wrap;">
+								<section style="font-weight: 600; font-size: 15px">Total amount (including VAT)</section>
+								<section id="text-total" style="color: #F39801; font-size: 20px; font-weight: 700;margin-top: -.3rem">87,4$</section>
+								<a style="width: 400px" href="Trang_TT.html"><button  style="background-color: #F39801; width: 100%; border-radius: 2rem;border:none; padding: 0.5rem;color: white;font-weight: 700;margin-top: 1rem">Buy</button></a>
+								<section style="font-size: 13px;color: red;font-weight: 600;margin-top: 0.1rem">(Discounts on the website apply to retail only)</section>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="page-footer font-small indigo footer_end" style="background: black; color:white">
+			<!-- footer links -->
+			<div class="container">
+
+				<!-- grid row-->
+				<div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+					<!-- grid column -->
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">meta</a>
+						</h6>
+						<ul class="footer_meta-list">
+							<li class="footer_meta-item">>log in</li>
+							<li class="footer_meta-item">>entries feed</li>
+							<li class="footer_meta-item">>comments feed</li>
+							<li class="footer_meta-item">>wordpress.org</li>
+						</ul>
+					</div>
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">recent posts</a>
+						</h6>
+						<ul class="footer_post-list">
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/down-jackets-1281699_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >jackets for the soul. what color is yours?</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/vibrant-641434_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >best fabrics for your dream dress!</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/stockings-428602_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >long legs? no longer a myth! check it out!</span>
+							</li>
+							<li class="footer_post-item">
+								<img src="https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/clothing-964878_1920-65x65.jpg" alt="">
+								<span class="footer_post-item-content" >latest trends for autumn are here!</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">about</a>
+						</h6>
+						<div class="footer_about-text">
+							<div>pri quas audiam virtute ut, case utamur fuisset eam ut, iisque accommodare an eam.</div><br>
+							<div>reque blandit qui eu, cu vix nonumy volumus. legendos intellegam id usu, vide oporteat vix eu, id illud principes has. nam tempor utamur gubergren no.</div>
+						</div>
+					</div>
+					<!-- grid column -->
+
+					<!-- grid column -->
+					<div class="col-md-3 mb-2">
+						<h6 class="text-uppercase font-weight-bold footer_content">
+							<a class="footer_content-br" href="#!">tags</a>
+						</h6>
+						<div class="footer_tags ">
+							<button class="footer_tags-btn">autumn</button>
+							<button class="footer_tags-btn">dress</button>
+							<button class="footer_tags-btn">fashion</button>
+							<button class="footer_tags-btn">jackets</button>
+							<button class="footer_tags-btn">stockings</button>
+							<button class="footer_tags-btn">trends</button>
+						</div>
+					</div>
+				</div>
+				<div class="row pb-3">
+					<div class="col-md-12">
+						<div class="mb-5 flex-center">
+							<!-- facebook -->
+							<a class="fb-ic">
+								<i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+							</a>
+							<!-- twitter -->
+							<a class="tw-ic">
+								<i class="fab fa-twitter fa-lg white-text mr-4"> </i>
+							</a>
+							<!-- google +-->
+							<a class="gplus-ic">
+								<i class="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
+							</a>
+							<!--linkedin -->
+							<a class="li-ic">
+								<i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+							</a>
+							<!--instagram-->
+							<a class="ins-ic">
+								<i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+							</a>
+							<!--pinterest-->
+							<a class="pin-ic">
+								<i class="fab fa-pinterest fa-lg white-text"> </i>
+							</a>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="footer-copyright text-center  bg-dark  py-3" style="color:white">© 2020 copyright:
+			<a href="https://mdbootstrap.com/"> sach.com</a>
+		</div>
+	</div>
+</body>
+<script>
+	const items = [
+		{
+			name:'Quan ao 1',
+			price: 2.5,
+			quality:1,
+			img:'https://img.ltwebstatic.com/images3_pi/2021/10/21/16347795186cf862d2292f68ca2003b9b782703b6a_thumbnail_900x.webp',
+			id:'01'
+		},
+		{
+			name:'Quan ao 2',
+			price: 4.8,
+			quality:1,
+			img:'https://img.ltwebstatic.com/images3_pi/2021/11/22/1637547375197e274b1951677140a2a2039dc1d29a_thumbnail_900x.webp',
+			id:'02'
+		},
+		{
+			name:'Quan ao 3',
+			price: 7.6,
+			quality:1,
+			img:'https://img.ltwebstatic.com/images3_pi/2021/11/01/1635749854e7a1761264be338c91d0b94f589b7082_thumbnail_900x.webp',
+			id:'03'
+		},
+		{
+			name:'Quan ao 4',
+			price: 6.8,
+			quality:1,
+			img:'https://img.ltwebstatic.com/images3_pi/2021/10/08/1633674725fc7765f32ee3fa00ce3d4af10552aa23_thumbnail_900x.webp',
+			id:'04'
+		},
+		{
+			name:'Quan ao 5',
+			price: 3.2,
+			quality:1,
+			img:'https://img.ltwebstatic.com/images3_pi/2021/09/27/16327194299086de63c71a257a898fbdf82151693e_thumbnail_900x.webp',
+			id:'05'
+		},
+
+	]
+	const Shipping = 2;
+
+	function remove(index){
+		items.splice(index,1);
+		render();
+	}
+	function update(index, quality){
+		if(quality < 1){
+			return
+		}
+		items[index].quality = quality;
+		render();
+	}
+	function render(){
+		let subtotal = 0;
+		items.forEach(item =>{
+			subtotal += item.price * item.quality;
+			console.log(subtotal);
+		})
+		total = subtotal + Shipping;
+		const html = items.map(item =>`<tr>
+			<th scope="row">${item.id}</th>
+			<td style="width: 80px"><img style="width: 100%" src="${item.img}" alt=""></td>
+			<td><span>${item.name}</span></td>
+			<td>${item.price}</td>
+			<td>
+			<a style="color: black; text-decoration: none" href="#!" class="g">-</a>
+			<input style="width: 25px;text-align: center;" class="s" min="1" value="${item.quality}" type="text">
+			<a style="color: black; text-decoration: none" href="#!" class="t">+</a></td>
+			<td class="del" style="cursor: pointer;color: blue">
+			<svg style="width: 15px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" class="delete" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path></svg>
+			</td>
+			</tr>
+
+			`).join('');
+		document.getElementById('render-html').innerHTML = html;
+		document.getElementById('text-subtotal').innerText = `${subtotal.toFixed(2)}$`;
+		document.getElementById('text-shipping').innerText = `${Shipping}$`;
+		document.getElementById('text-total').innerText = `${total.toFixed(2)}$`;
+
+		const delButton = document.querySelectorAll('.del');
+		const dec = document.querySelectorAll('.g');
+		const inc = document.querySelectorAll('.t');
+		for(let i = 0; i < delButton.length ; i++){
+			dec[i].addEventListener("click", function() {
+				update(i, items[i].quality - 1);
+			});
+			inc[i].addEventListener("click", function() {
+				update(i, items[i].quality + 1);
+			});
+			delButton[i].addEventListener("click", function() {
+				remove(i);
+				console.log(i)
+			});
+		}
+	}
+	render();
+</script>
+</html>

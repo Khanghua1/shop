@@ -1,0 +1,21 @@
+.discount-code-form{
+	height: 42px;
+	color:#fff;
+	border: 1px solid black;
+}
+@media(max-width: 767px){
+	.discount-code-form-mobile{
+		position: static;
+		padding: 0 2rem;
+	}
+	.mobiwap2 {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F5F5F5;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+	}
+}

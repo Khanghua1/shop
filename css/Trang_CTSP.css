@@ -1,0 +1,14 @@
+.bc{
+	border :2px solid  blue;
+	color:  blue;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-weight: 500;
+}
+.bcmon{
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+		font-size: 17px;
+	}
